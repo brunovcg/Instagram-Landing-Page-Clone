@@ -49,6 +49,9 @@ html {
 	align-items: center;
 }
 
+body {
+	max-width: 100vw;
+}
 
 /*TOPO*/
 header a figure{
@@ -110,7 +113,7 @@ footer {
 /*PÁGINA INICIAL*/
 main{
 
-	width: 100vw;
+	max-width: 100vw;
 	background-color: var(--background-primary);
 	padding-top: 5vh;
 	border-top: solid 1px var(--item-color);
@@ -317,7 +320,8 @@ body {
 }
 
 	main {
-		width:935px;
+		min-width:935px;
+		max-width: 935px;
 		margin:0;
 	}
 
