@@ -14,38 +14,445 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 **** PÁGINA INICIAL
 */
 
+
+
+/* --------------------------MOBILE-FIRST------------------------------ */
+
+
+
 /* VARIÁVEIS */
 :root{
-  
-}
+	--text-color:#262626;
+	--second-color:#00356B;
+	--background-primary: #FAFAFA;
+	--item-color: rgb(182, 177, 177);
+	--link-color:#044fdb;
+  }
+
+
+/* reset */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	font-family: Helvetica, Arial, sans-serif;
+	list-style: none;
+	}
 
 /*BODY*/
-body{
 
+html {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
+
 
 /*TOPO*/
-header{
-	
+header a figure{
+	display: flex;	
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 3vh 2vw 1vw 2vw;
 }
+
+header a figure img {
+	width: 35vw;
+}
+
+
 
 /*RODAPÉ*/
-footer{
-
+footer {
+	margin-top: 5vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
+
+	footer nav {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		width: 95%;
+	}
+
+	.footer-nav a{ 
+		text-decoration: none;
+		background-color: var(--background-primary) ;
+		width: 20vw;
+		/* height: 5vh; */
+		color: var(--item-color);
+		text-align: center;
+		border: solid 1px var(--item-color);
+		padding:1vh;
+		font-size: 3vw;
+	}
+
+	.footer-nav a:hover{
+		background-color: var(--item-color);
+		border: solid 1px var(--item-color);
+		color: var(--background-primary);
+	}
+
+	.copyright p {
+		margin: 3vw;
+	}
+		
 
 /*PÁGINA INICIAL*/
 main{
-	
-}
+
+	width: 100vw;
+	background-color: var(--background-primary);
+	padding-top: 5vh;
+	border-top: solid 1px var(--item-color);
+	}
+
 	main .profile-content{
-
+		display: flex;
+		flex-direction: row;
+		margin: 0 3vw;
 	}
 
-	main .highlighted-stories{
-
+	main .profile-content .profile-photo {
+		width: 35%;
+		display: flex;
+		justify-content: center;
+		
 	}
+
+	main .profile-photo figure{
+		border-radius: 50%;
+		border: solid 1px var(--item-color);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 25vw;
+		height: 25vw;
+	}
+
+	main .profile-photo figure img{
+		border-radius: 50%;
+		border: solid 1px var(--item-color);
+		width: 94%;
+		height: 94%;
+	}
+
+
+	main .profile-content .profile-info {
+		width: 65%;
+		padding-right: 7vw;
+		margin-left: 5vw;
+	}
+
+	main .profile-content .profile-info h1 {
+		font-size: 7vw;
+		font-weight: lighter;
+		margin-bottom: 1vh;
+	}
+
+	main .profile-content .profile-info div  {
+		display: flex;
+		flex-direction: row;
+	}
+
+	main .profile-content .profile-info div p {
+		margin:2vw 2vw 2vw 0;
+		
+	}
+
+	main .profile-content .profile-info div p span {
+		font-weight: bold;
+	}
+
+	main .profile-content .profile-info h2 {
+		font-size: 5vw;
+		margin-top: 5vh;
+		margin-bottom: 1vh;
+		margin-left: -30vw;
+	}
+
+	main .profile-content .profile-info ul li p {
+		margin-left: -30vw;
+		font-size:3.8vw;
+		line-height: 1,5px;
+	}
+
+
+	.link{
+		padding-top: 5vh;
+		margin-left: -30vw;
+		font-size: 4vw;
+		text-decoration: none;
+		color: var(--link-color);
+	}
+	
+	main .highlighted-stories ul{
+		display: flex;
+		flex-direction: row;
+		min-height: 20vh;
+		padding-top: 0;
+		padding-left: 7vw;
+		padding-bottom: 0;
+	}
+
+	main .highlighted-stories ul li{
+		display: flex;
+		flex-direction: column;
+		width: 100px;
+		justify-content: center;
+		align-items: center;
+		min-height: 90px;
+	}
+
+	main .highlighted-stories ul li figure{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: solid var(--item-color) 1px;
+		border-radius: 50%;
+		width: 15vw;
+		height: 15vw;
+		
+	}
+
+	main .highlighted-stories ul li figure img {
+		width:95%;
+		height:95%;
+		border-radius: 50%;
+	}
+
+	main .highlighted-stories ul li div{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		font-size: 0.8em;
+		font-weight: bold;
+		padding-top: 5px;
+		color: var(--text-color)
+	}
+
+
 
 	main .profile-posts{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+
+	main .profile-posts nav{
+		border-top: solid 1px var(--item-color);
+		display: flex;
+		justify-content: center;
+		width: 90%;
+		font-weight: bold;
+		margin-bottom: 2vw;
+	}
+
+	main .profile-posts nav a{
+		text-decoration: none;
+		text-transform:uppercase;
+		text-align: center;
+		padding:2vh 5vw 2vh 5vw;
+		color: var(--item-color);
+		font-size:1em;
+		height: 100%;
+		width: 33vw;
+	}
+
+	main .profile-posts nav a:hover{
+		color: var(--text-color);
+		border-top: 1px solid var(--text-color)
 
 	}
+
+	main .profile-posts ul li a figure {
+		width:32vw;
+		height: 32vw;
+	}
+
+	main .profile-posts ul li a figure img {
+		width:100%;
+		height: 100%;
+	}
+
+	main .profile-posts ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	main .profile-posts figcaption, {
+		display: none;
+	}
+
+/* --------------------------DESKTOP-SCREEN-UP-480PX------------------ */
+
+@media (min-width:481px) {
+
+body {
+	margin:0;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+}
+
+	main {
+		width:935px;
+		margin:0;
+	}
+
+	main .profile-posts ul li a figure {
+		width:293px;
+		height: 293px;
+	}
+	
+	header {
+		width: 100%;
+		align-items: flex-start;
+	}
+
+	header a figure {
+		justify-content: flex-start;
+		margin-left: 5vw;
+	}
+
+	header a figure img {
+		width: 20vw;
+		margin-left: 100px;
+	}
+
+
+	main .profile-content .profile-photo figure {
+		width: 180px;
+		height: 180px;
+		
+	}
+
+	main .profile-content .profile-info h1 {
+
+	font-size:2em ;
+	}
+
+
+
+	main .profile-content .profile-info h2 {
+		margin: 0;
+		font-size: 1em ;
+	}
+
+	main .profile-content .profile-info ul li p {
+		margin:0;
+		font-size: 1em;
+	}
+
+	.link {
+		margin:0;
+		font-size: 1em;
+		}
+
+	main .profile-content {
+		margin-right:1vw;
+		}
+
+	main .profile-content .profile-photo {
+			width:40%;
+		}
+
+	
+	main .profile-content .profile-info {
+			width:60%;
+			padding-right: 3vw;
+		}
+
+	main .highlighted-stories ul {
+		padding-top: 5vh;;
+		padding-left:8vw;
+		padding-bottom: 5vh;
+	}
+
+	main .highlighted-stories ul li figure {
+
+		width: 75px;
+		min-width: 75px;
+		max-width: 75px;
+
+		height: 75px;
+		min-height: 75px;
+		max-height: 75px;
+	}
+
+
+	main .profile-posts nav a{
+		padding:2vh 2vw 2vh 2vw;
+		width: 15vw;
+	}
+
+	main .profile-posts ul li a figure img {
+	width: 96%;
+	height: 96%;
+	}
+
+	
+	footer {
+		background-color: var(--background-primary);
+		margin-top: 5vh;
+		width: 100vw;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.footer-nav {
+		width:75%;
+	}
+
+
+	.footer-nav a{ 
+		color: var(--second-color);
+		border: none;
+		width: 5vw;
+		text-align: center;
+		font-size: 0.6em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+
+	footer div {
+		width:25%;
+		text-align:start;
+		color: var(--item-color);
+	}
+
+	footer div p {
+		font-size: 0.8em;
+		width: 100%;
+		margin-left: -10px;
+
+	}
+
+
+
+
+
+
+
+
+
+}
